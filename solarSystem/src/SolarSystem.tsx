@@ -18,7 +18,7 @@ interface SolarSystemProps {
   resetKey: number;
 }
 
-const SolarSystem: React.FC<SolarSystemProps> = ({ params, resetKey }) => {
+const SolarSystem: React.FC<SolarSystemProps> = ({ params, resetKey = 0 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const paramsRef = useRef<SimulationParams>(params);
 

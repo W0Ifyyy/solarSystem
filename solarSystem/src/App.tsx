@@ -1,4 +1,3 @@
-import { useCallback, useState } from 'react'
 import { G_CONSTANT, SUN_CONFIG, TIME_SCALE } from './planetData';
 import type { SimulationParams } from './types';
 import SolarSystem from './SolarSystem';
@@ -10,17 +9,18 @@ const defaultParams: SimulationParams = {
 };
 
 function App() {
+  /*
   const [params, setParams] = useState<SimulationParams>(defaultParams);
   const [resetKey, setResetKey] = useState(0);
-
-  const handleReset = useCallback(() => {
+  */
+  /*const handleReset = useCallback(() => {
     setParams(defaultParams);
     setResetKey((k) => k + 1);
   }, []);
-
+  */
   return (
     <div style={{ width: "100vw", height: "100vh", overflow: "hidden" }}>
-      <SolarSystem params={params} resetKey={resetKey} />
+      <SolarSystem params={defaultParams} resetKey={0}/>
     </div>
   );
 }
